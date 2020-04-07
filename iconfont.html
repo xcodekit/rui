@@ -1,0 +1,62 @@
+ 
+<html>
+  <head> 
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <title>RUI-Design</title> 
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <meta name="viewport" content="width=640, target-densitydpi=device-dpi, maximum-scale=2.0, user-scalable=0" > 
+          <link href="/css/style.css" rel="stylesheet"></link>
+          <link href="/bin/pro.iconfont.hub/agris-icon.css" rel="stylesheet"></link>
+          <script src="/js/import.js"></script>
+          <script type="text/javascript">
+                  app.import(RUI_CSS);
+                  app.import(RUI_JQUERY);
+                  app.import(RUI_CORE);  
+                  app.import("<script src=\"/js/common.js\"></"+"script>");
+          </script> 
+       
+    </head>
+   <body class="rui-app"> 
+      <div id="mHeader" class="w-main"></div>
+      <div class="frame w-main">
+                <div id="agrisPanel" class=" rui-panel-innerfix" data-title="农事相关">
+                     <div id="agrisList" class="icon-list">
+                        <div class="item"><span><a><i class='{icon}'></i></a></span>
+                            <span><label>{name}</label></span>
+                            <span><em>{title}</em></span>
+                        </div> 
+                     </div> 
+                </div>
+                <script type="text/javascript">
+                  function addIcon(list,icon,title){
+                     list.event("append",{"icon":icon,"name":"."+icon,"title":title});
+                  } 
+                  rui(function(){  
+                      rui("#agrisPanel").widget("rui-panel");
+                     var agris=rui("#agrisList").widget("rui-layout-list");
+                       addIcon(agris,"agris-icon-cpcy", "产品检测");
+                       addIcon(agris,"agris-icon-cpjc", "产品抽检");
+                       addIcon(agris,"agris-icon-dcxc", "督察巡查");
+                       addIcon(agris,"agris-icon-jcdw", "检测单位");
+                       addIcon(agris,"agris-icon-jgdw", "监管单位");
+                       addIcon(agris,"agris-icon-jgdx", "监管对象");
+                       addIcon(agris,"agris-icon-jgjg", "监管机构");
+                       addIcon(agris,"agris-icon-jgry", "监管人员");
+                       addIcon(agris,"agris-icon-spgl", "三品管理");
+                       addIcon(agris,"agris-icon-sygl", "溯源管理"); 
+                       addIcon(agris,"agris-icon-jgdt", "监管动态");
+                       addIcon(agris,"agris-icon-xcpx", "宣传培训"); 
+                       addIcon(agris,"agris-icon-gzkb", "&nbsp;");
+                       addIcon(agris,"agris-icon-whdc", "&nbsp;");
+                       addIcon(agris,"agris-icon-xxzl", "&nbsp;");
+                       addIcon(agris,"agris-icon-ypjc", "&nbsp;");
+                       addIcon(agris,"agris-icon-zhtj", "&nbsp;");
+                      });
+                 </script> 
+      </div> 
+   </body>
+   
+  </html>
+
+
+ 

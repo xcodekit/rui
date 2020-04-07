@@ -1,0 +1,304 @@
+.syntaxhighlighter,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	outline: 0 !important;
+	background: none !important;
+	text-align: left !important;
+	float: none !important;
+	vertical-align: baseline !important;
+	position: static !important;
+	left: auto !important;
+	top: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	height: auto !important;
+	width: auto !important;
+	line-height: 1.1em !important;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	font-size: 1em !important;
+	min-height: inherit !important; /* For IE8, FF & WebKit */
+	min-height: auto !important; /* For IE7 */
+}
+
+.syntaxhighlighter
+{
+	width: 99% !important; /* 99% fixes IE8 horizontal scrollbar */
+	margin: 1em 0 1em 0 !important;
+	padding: 1px !important; /* adds a little border on top and bottom */
+	position: relative !important;
+}
+
+.syntaxhighlighter .bold 
+{
+	font-weight: bold !important;
+}
+
+.syntaxhighlighter .italic 
+{
+	font-style: italic !important;
+}
+
+.syntaxhighlighter .line
+{
+}
+
+.syntaxhighlighter .no-wrap .line .content
+{
+	white-space: pre !important;
+}
+
+.syntaxhighlighter .line table 
+{
+	border-collapse: collapse !important;
+}
+
+.syntaxhighlighter .line td
+{
+	vertical-align: top !important;
+}
+
+.syntaxhighlighter .line .number
+{
+	width: 3em !important;
+}
+
+.syntaxhighlighter .line .number code
+{
+	width: 2.7em !important;
+	padding-right: .3em !important;
+	text-align: right !important;
+	display: block !important;
+}
+
+.syntaxhighlighter .line .content
+{
+	padding-left: .5em !important;
+}
+
+.syntaxhighlighter .line .spaces
+{
+}
+
+/* Disable border and margin on the lines when no gutter option is set */
+.syntaxhighlighter.nogutter .line .content
+{
+	border-left: none !important;
+}
+
+.syntaxhighlighter .bar
+{
+	display: none !important;
+}
+
+.syntaxhighlighter .bar.show 
+{
+	display: block !important;
+}
+
+.syntaxhighlighter.collapsed .bar
+{
+	display: block !important;
+}
+
+/* Adjust some properties when collapsed */
+
+.syntaxhighlighter.collapsed .lines
+{
+	display: none !important;
+}
+
+.syntaxhighlighter .lines.no-wrap
+{
+	overflow: auto !important;
+	overflow-y: hidden !important;
+}
+
+/* Styles for the toolbar */
+
+.syntaxhighlighter .toolbar
+{
+	position: absolute !important;
+	right: 0px !important;
+	top: 0px !important;
+	font-size: 1px !important;
+	padding: 8px 8px 8px 0 !important; /* in px because images don't scale with ems */
+}
+
+.syntaxhighlighter.collapsed .toolbar
+{
+	font-size: 80% !important;
+	padding: .2em 0 .5em .5em !important;
+	position: static !important;
+}
+
+.syntaxhighlighter .toolbar a.item,
+.syntaxhighlighter .toolbar .item
+{
+	display: block !important;
+	float: left !important;
+	margin-left: 8px !important;
+	background-repeat: no-repeat !important;
+	overflow: hidden !important;
+	text-indent: -5000px !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar .item
+{
+	display: none !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar .item.expandSource
+{
+	background-image: url(magnifier.png) !important;
+	display: inline !important;
+	text-indent: 0 !important;
+	width: auto !important;
+	float: none !important;
+	height: 16px !important;
+	padding-left: 20px !important;
+}
+
+.syntaxhighlighter .toolbar .item.viewSource
+{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHtSURBVDjLjZM9T9tQFIYpQ5eOMBKlW6eWIQipa8RfQKQghEAKqZgKFQgmFn5AWyVDCipVQZC2EqBWlEqdO2RCpAssQBRsx1+1ndix8wFvfW6wcUhQsfTI0j33PD7n+N4uAF2E+/S5RFwG/8Njl24/LyCIOI6j1+v1y0ajgU64cSSTybdBSVAwSMmmacKyLB/DMKBpGkRRZBJBEJBKpXyJl/yABLTBtm1Uq1X2JsrlMnRdhyRJTFCpVEAfSafTTUlQoFs1luxBAkoolUqQZbmtJTYTT/AoHInOfpcwtVtkwcSBgrkDGYph+60oisIq4Xm+VfB0+U/P0Lvj3NwPGfHPTcHMvoyFXwpe7UmQtAqTUCU0D1VVbwTPVk5jY19Fe3ZfQny7CE51WJDXqpjeEUHr45ki9rIqa4dmQiJfMLItGEs/FcQ2ucbRmdnSYy5vYWyLx/w3EaMfLmBaDpMQvuDJ65PY8Dpnz3wpYmLtApzcrIAqmfrEgdZH1grY/a36w6Xz0DKD8ES25/niYS6+wWE8mWfByY8cXmYEJFYLkHUHtVqNQcltAvoLD3v7o/FUHsNvzlnwxfsCEukC/ho3yUHaBN5Buo17Ojtyl+DqrnvQgUtfcC0ZcAdkUeA+ye7eMru9AUGIJPe4zh509UP/AAfNypi8oj/mAAAAAElFTkSuQmCC) ;
+}
+
+.syntaxhighlighter .toolbar .item.printSource
+{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJtSURBVDjLjZPfS1NhGMfPXfh3OG/E/yBImNkqrYGCzAthh+WNgXihwQYb2CoYukGwsdRLoYUWQbRAhqzc2Q91IrrVhlhLqznL5Tyb23m3s317z1szBzM68Lk47/N9Pud5XjgcAK7OVfM7/a2piE87HalRoLVHStrp1VKvLVi7fE9wns/WaXi58UgoH4kl/CxIyOZ/cyRKSKRFmF/tw/B4p3jl7utLFwp6baHiySnBxheZUkHkM8HKrgSpUsVGWsaDN/tQG/1PLxT02EIlRbBJBZtfZaztlSF8JEgdFqBMdnh8im7LSqWpYHJysqXHFiS5AkGMfi12UP0zRRm+D6fwxvPI0dWu3Q8QvV7f0iCgzQZKnl4WjqkgcVDDeyrYpqLoXoWtsbxTpLUyrlsFDA4O5vv7+w1MQBu7Z2dnEY1GcXsqjCwVJDM1JCixb1Vs0VXCdIoAXSVLBTcfhhEIBDA+Pg6NRtOtCLbpg0wmA7PZ/F8oWUEQMDAwsKsIiCzLUFhfX4coiv8kFAqhnh8bG6txFosFhBDG4uIiUqkUEzVDqc3Pz5/leZ4HZzKZkEgkGG63G8lkEn6/vylKxuFwnOU7OzvBTUxMwOfzMex2O+LxOJaWlpoSi8VgtVrP8u3t7eDoHvB6vQyXywV6Jwyj0YjR0VE2Zl9fH7q6uqBWq9lZPd/W1gZuZGSk6vF42IHSuPD8JZbfBpvybOEFOjo6WHZubg6tra3gDAbDzNDQ0LZOpwPvCqNYIjg6IfhBOcxJSGdL2PtewKeMiKJUBu8MQ6VSKc1bFFPDv8C7ItXhJ2sYdv/lDmOVodR4Z6R6vucXuxIEyKz+W40AAAAASUVORK5CYII=) !important;
+}
+
+.syntaxhighlighter .toolbar .item.copyToClipboard
+{
+	text-indent: 0 !important;
+	background: none !important;
+	overflow: visible !important;
+}
+
+.syntaxhighlighter .toolbar .item.about
+{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKkSURBVDjLpZPdT5JhGMb9W+BPaK3matVqndXWOOigA6fmJ9DUcrUMlrN0mNMsKTUznQpq6pyKAm8CIogmypcg8GIiX8rHRHjhVbPt6o01nMvZWge/k3vP9duuZ/edAyDnf/hjoCMP2Vr3gUDj3CdV6zT1xZ6iFDaKnLEkBFOmPfaZArWT5sw60iFP+BAbOzTcQSqDZzsNRyCNkcVoaGghzDlVQKylOHJrMrUZ2Yf52y6kc36IxpyoH1lHF7EBgyMKV4jCJ5U/1UVscU4IZOYEa3I1HtwI01hwxlDLhDoJD/wxGr5YGmOLAdRIrVCuhmD3JdA6SQabx12srGB0KSpc86ew4olDOGjH4x4z0gdHDD9+c4TaQQtq+k2Yt0egXYugTmoVZgV9cyHSxXTtJjZR3WNCVfcK/NE0ppYDUNu2QTMCtS0IbrsOrVMOWL27eNJtJLOCDoWXdgeTEEosqPxoBK/TwDzWY9rowy51gJ1dGr2zLpS2aVH5QQ+Hbw88sZ7OClrGXbQrkMTTAQu4HXqUv9eh7J0OSfo7tiIU+GItilpUuM/AF2tg98eR36Q+FryQ2kjbVhximQu8dgPKxPMoeTuH4tfqDIWvCBQ2KlDQKEe9dBlGTwR36+THFZg+QoUxAL0jgsoOQzYYS+wjskcjTzSToVAkA7Hqg4Spc6tm4vgT+eIFVvmb+eCSMwLlih/cNg0KmpRoGzdl+BXOb5jAsMYNjSWAm9VjwesPR1knFilPNMu510CkdPZtqK1BvJQsoaRZjqLGaTzv1UNp9EJl9uNqxefU5QdDnFNX+Y5Qxrn9bDLUR6zjqzsMizeWYdG5gy6ZDbk8aehiuYRz5jHdeDTKvlY1IrhSMUxe4g9SuVwpdaFsgDxf2i84V9zH/us1/is/AdevBaK9Tb3EAAAAAElFTkSuQmCC) !important;
+}
+
+/** 
+ * Print view.
+ * Colors are based on the default theme without background.
+ */
+
+.syntaxhighlighter.printing,
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content,
+{
+	background: none !important;
+}
+
+/* Gutter line numbers */
+.syntaxhighlighter.printing .line .number
+{
+	color: #bbb !important;
+}
+
+/* Add border to the lines */
+.syntaxhighlighter.printing .line .content
+{
+	color: #000 !important;
+}
+
+/* Toolbar when visible */
+.syntaxhighlighter.printing .toolbar
+{
+	display: none !important;
+}
+
+.syntaxhighlighter.printing a
+{
+	text-decoration: none !important;
+}
+
+.syntaxhighlighter.printing .plain,
+.syntaxhighlighter.printing .plain a
+{ 
+	color: #000 !important;
+}
+
+.syntaxhighlighter.printing .comments,
+.syntaxhighlighter.printing .comments a
+{ 
+	color: #008200 !important;
+}
+
+.syntaxhighlighter.printing .string,
+.syntaxhighlighter.printing .string a
+{
+	color: blue !important; 
+}
+
+.syntaxhighlighter.printing .keyword
+{ 
+	color: #069 !important; 
+	font-weight: bold !important; 
+}
+
+.syntaxhighlighter.printing .preprocessor 
+{ 
+	color: gray !important; 
+}
+
+.syntaxhighlighter.printing .variable 
+{ 
+	color: #a70 !important; 
+}
+
+.syntaxhighlighter.printing .value
+{ 
+	color: #090 !important; 
+}
+
+.syntaxhighlighter.printing .functions
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter.printing .constants
+{ 
+	color: #0066CC !important; 
+}
+
+.syntaxhighlighter.printing .script
+{
+	font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .color1,
+.syntaxhighlighter.printing .color1 a
+{ 
+	color: #808080 !important; 
+}
+
+.syntaxhighlighter.printing .color2,
+.syntaxhighlighter.printing .color2 a
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter.printing .color3,
+.syntaxhighlighter.printing .color3 a
+{ 
+	color: red !important; 
+}
+
+/*xirifei*/
+.syntaxhighlighter .toolbar .item .printSource{display:none;} 
