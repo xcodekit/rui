@@ -5,26 +5,33 @@
            <title>RUI-Design</title> 
            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
            <meta name="viewport" content="width=640, target-densitydpi=device-dpi, maximum-scale=2.0, user-scalable=0" > 
-           <link href="/css/style.css" rel="stylesheet"></link>
-           <script src="/js/import.js"></script>
-      </head>
+           <link href="css/style.css" rel="stylesheet"></link>
+           <link href="bin/pro.iconfont.hub/agris-icon.css" rel="stylesheet"></link>
+           <script src="js/import.js"></script>
+           <script type="text/javascript">
+                 app.import(RUI_CSS);
+                 app.import(RUI_JQUERY);
+                 app.import(RUI_CORE);  
+                 app.import("<script src=\"js/common.js\"></"+"script>");
+          </script>  
+     </head>
      <body class="rui-app"> 
          <div id="mHeader" class="w-main"></div>
          <div class="frame">
             
+           <!--Frame-->
                <div id="indexTop" class="w-main">
                     <span><h1>RUI UI设计规范<em>V1.0</em></h1> </span>
                     <span><div class="pc"></div></span>
                </div>
+                <script>
+                     rui(function(){
+                         mHeader.active("index");
+                     });
 
+                </script>
+           <!--Frame END-->
          </div> 
      </body>
-     <script >
-       app.import(RUI_CSS);
-       app.import(RUI_JQUERY);
-        app.import(RUI_CORE);  
-        app.import("<script src=\"/js/common.js\"></"+"script>");
-     
-     </script> 
     
     </html>

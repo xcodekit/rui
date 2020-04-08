@@ -8,3 +8,4 @@ RUI_CSS= "<link href=\"bin/pro.rui.code/get/pro.rui.ant_min-M.css\" rel=\"styles
 RUI_JQUERY= "<script src=\"bin/pro.rui.code/get/com.jquery_min.js\"></script>";
 RUI_CORE= "<script data-imports=\"icon,table\"  src=\"bin/pro.rui.code/get/pro.rui.ant_min.js\"></script>";
  
+ 

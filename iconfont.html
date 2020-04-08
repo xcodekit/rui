@@ -5,20 +5,22 @@
           <title>RUI-Design</title> 
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
           <meta name="viewport" content="width=640, target-densitydpi=device-dpi, maximum-scale=2.0, user-scalable=0" > 
-          <link href="/css/style.css" rel="stylesheet"></link>
-          <link href="/bin/pro.iconfont.hub/agris-icon.css" rel="stylesheet"></link>
-          <script src="/js/import.js"></script>
+          <link href="css/style.css" rel="stylesheet"></link>
+          <link href="bin/pro.iconfont.hub/agris-icon.css" rel="stylesheet"></link>
+          <script src="js/import.js"></script>
           <script type="text/javascript">
                   app.import(RUI_CSS);
                   app.import(RUI_JQUERY);
                   app.import(RUI_CORE);  
-                  app.import("<script src=\"/js/common.js\"></"+"script>");
+                  app.import("<script src=\"js/common.js\"></"+"script>");
           </script> 
        
     </head>
    <body class="rui-app"> 
       <div id="mHeader" class="w-main"></div>
-      <div class="frame w-main">
+      <div class="frame">
+           <!--Frame-->
+              <div class="w-main">
                 <div id="agrisPanel" class=" rui-panel-innerfix" data-title="农事相关">
                      <div id="agrisList" class="icon-list">
                         <div class="item"><span><a><i class='{icon}'></i></a></span>
@@ -27,11 +29,14 @@
                         </div> 
                      </div> 
                 </div>
+               </div>
                 <script type="text/javascript">
                   function addIcon(list,icon,title){
                      list.event("append",{"icon":icon,"name":"."+icon,"title":title});
                   } 
                   rui(function(){  
+                     
+                     mHeader.active("iconFont");
                       rui("#agrisPanel").widget("rui-panel");
                      var agris=rui("#agrisList").widget("rui-layout-list");
                        addIcon(agris,"agris-icon-cpcy", "产品检测");
@@ -53,6 +58,8 @@
                        addIcon(agris,"agris-icon-zhtj", "&nbsp;");
                       });
                  </script> 
+              
+           <!--Frame END-->
       </div> 
    </body>
    
